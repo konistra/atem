@@ -1,0 +1,227 @@
+    .footer {
+        // .footer__job
+        &__job {
+            background-color: #e5e5e5;
+            &::before {
+                content: '';
+                height: 80px;
+                display: block;
+            }
+            .job {
+                // .job__title
+                &__title {
+                    // padding: 80px 0 0;
+                    margin: 0px 0 40px;
+                }
+                // .job__columns
+                &__columns {
+                    display: flex;
+                    padding: 0 0 125px;
+                }
+                // .job__column
+                &__column {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    margin: 0 30px 0 0;
+                    &:last-child() {
+                        margin: 0;
+                    }
+                }
+                // .job__info
+                &__info {
+                    line-height: 16px;
+                    font-weight: 800;
+                    color: #333333;
+                    font-size: 14px;
+                    margin: 0 0 40px;
+                }
+                // .job__actual
+                &__actual {
+                    margin: 0 0 30px;
+                }
+                // .job__requirements
+                &__requirements {
+                    text-transform: uppercase;
+                    margin: 0 0 34px;
+                    font-weight: 800;
+                    font-size: 16px;
+                    li {
+                        text-transform: none;
+                        padding: 5px 0 0px;
+                        &::before {
+                            content: "";
+                            display: inline-block;
+                            width: 12px;
+                            height: 12px;
+                            border-radius: 50%;
+                            padding: 6px;
+                            margin: 2px 8px 0 0;
+                            background-color: #d9232e;
+                            // outline: blue 1px solid;
+                        }
+                    }
+                }
+                // .job__attention
+                &__attention {
+                    font-size: 14px;
+                    margin: 0 0 20px;
+                }
+                // .job__e-mail
+                &__e-mail {
+                    text-transform: uppercase;
+                    font-weight: 800;
+                    font-size: 14px;
+                    a {
+                        color: #333;
+                        text-decoration: underline;
+                    }
+                }
+                // .job__e-mail-footnote
+                &__e-mail-footnote {}
+                // .job__flex
+                &__flex {
+                    text-align: center;
+                    .icon {
+                        max-width: 100%;
+                        margin: 0 0 15px;
+                        transition: all 0.3s ease 0s;
+                        transform: scale(0.9);
+                        &:hover {
+                            transform: scale(1);
+                        }
+                    }
+                }
+            }
+        }
+        // .footer__contact
+        &__contact {
+            background-color: #d92530;
+            .contact {
+                // .contact__row
+                &__row {
+                    color: #ffffff;
+                    font-size: 13px;
+                    margin: 0 0 0 -80px;
+                    @media (max-width: 1279px) {
+                        margin: 0 0 0 0px;
+                    }
+                }
+                // .contact__columns
+                &__columns {
+                    display: flex;
+                    margin: 0px 0px 72px 0px;
+                    justify-content: space-between;
+                }
+                // .contact__logo
+                &__logo {
+                    max-width: 299px;
+                    min-height: 84px;
+                    margin: 60px 0 30px;
+                }
+                // .contact__title
+                &__requisites {
+                    max-width: 260px;
+                    p {
+                        margin: 0px 0px 20px 0px;
+                    }
+                }
+                &__site-map {
+                    max-width: 150px;
+                    margin: 110px 0px 0px 0px;
+                    li {
+                        margin: 0px 0px 12px 0px;
+                        &:hover {
+                            font-weight: 800;
+                        }
+                        a {
+                            &:hover {
+                                font-weight: 800;
+                            }
+                            color: #fff;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                &__backcall {
+                    margin: 110px 0px 0px 0px;
+                }
+                &__title {
+                    line-height: 17px;
+                    font-weight: 800;
+                    text-transform: uppercase;
+                    margin: 0px 0px 40px 0px;
+                }
+                // .contact__backcall-title
+                &__backcall-title {
+                    margin: -5px 0px 30px 0px;
+                }
+                // .contact__form
+                &__form {
+                    max-width: 378px;
+                    .form {
+                        // .form__body
+                        &__body {
+                            text-align: right;
+                        }
+                        // .form__item
+                        &__item {
+                            display: flex;
+                            justify-content: space-between;
+                            margin: 0px 0px 18px 0px;
+                            textarea {
+                                min-height: 112px;
+                                resize: none;
+                            }
+                        }
+                        // .form__label
+                        &__label {
+                            text-align: left;
+                            display: flex;
+                            max-width: 45px;
+                            font-size: 14px;
+                            align-items: center;
+                            margin: 0px 50px 0px 0px;
+                        }
+                        // .form__input
+                        &__input {
+                            padding: 10px;
+                            width: 300px;
+                            height: 33px;
+                            color: black;
+                            transition: box-shadow 0.3s ease 0s;
+                            &:focus {
+                                box-shadow: 0px 0px 7px rgba(0, 0, 0, .6);
+                            }
+                        }
+                        // .form__button
+                        &__button {
+                            line-height: 14px;
+                            font-weight: 800;
+                            text-transform: uppercase;
+                            padding: 8px 40px;
+                            color: #fff;
+                            background-color: rgba(0, 0, 0, .2);
+                            transition: all 0.3s ease 0s;
+                            &:hover {
+                                background-color: rgba(0, 0, 0, .5);
+                            }
+                        }
+                    }
+                }
+                // .contact__columns2
+                &__columns2 {
+                    padding: 0px 0px 72px 0px;
+                    display: flex;
+                    justify-content: space-between;
+                }
+                // .contact__maps
+                &__maps {
+                    max-width: 541px;
+                    border: 1px solid #333333;
+                }
+                // .contact__feedback
+                &__feedback {}
+            }
+        }
+    }

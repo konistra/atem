@@ -1,0 +1,164 @@
+.header {
+    background: url("../img/elements/bottom_rectangle.svg") center bottom / 1922px auto no-repeat, url("../img/bg/head_bg.jpg") center top / 1920px auto no-repeat;
+    padding: 0 0 75px 0;
+    // .header__row
+    .ml7 {
+        margin-left: 7px;
+    }
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        // outline: greenyellow 1px solid;
+    }
+    // .header__logo
+    &__logo {
+        flex: 0 1 100%;
+        margin: 25px 0 120px 0;
+        position: relative;
+        z-index: 1;
+        &::after {
+            content: "";
+            width: 100%;
+            height: 200px;
+            position: absolute;
+            z-index: -1;
+            left: -340px;
+            top: -25px;
+            background: url("../img/bg/logo-bg.png") no-repeat;
+        }
+    }
+    // .header__title
+    &__title {
+        color: #ffffff;
+        span {
+            margin-left: 100px;
+        }
+    }
+    // .header__subtitle
+    &__subtitle {
+        max-width: 300px;
+        margin: 45px 0;
+        // outline: green 1px solid;
+    }
+    // .header__menu
+    &__menu {
+        display: flex;
+        text-align: center;
+        flex-wrap: wrap;
+        flex: 0 0 570px;
+        margin: -135px -40px 0 0;
+        // outline: green 1px solid;
+    }
+    // .header__item
+    &__item {
+        width: 152px;
+        height: 164px;
+        background: url("../img/elements/menu-item-bg.svg") 0 0 no-repeat;
+        display: flex;
+        margin: 0 10px 0 0;
+        align-items: center;
+        &:first-child {
+            margin: 0 10px 0 80px;
+        }
+        &:nth-child(-n+3) {
+            margin-bottom: -20px;
+        }
+        span {
+            margin: 11px 0 0 0;
+            font-weight: 800;
+            font-size: 11px;
+            text-transform: uppercase;
+            color: #d7282f;
+        }
+        a {
+            padding: 25px;
+        }
+    }
+    // .header__icon
+    &__icon {
+        width: 58px;
+    }
+    &__about {
+        max-width: 600px;
+        margin: 0 0 35px 0;
+    }
+    // .header__columns
+    &__columns {
+        display: flex;
+        // outline :1px blue solid;
+    }
+    // .header__column
+    &__column {
+        flex: 0 0 240px;
+        &:last-child {
+            flex: 0 0 301px;
+            margin-left: auto;
+            position: relative;
+            z-index: 2;
+            &::after {
+                content: "";
+                width: 896px;
+                height: 587px;
+                position: absolute;
+                z-index: -1;
+                left: -131px;
+                top: -120px;
+                background: url("../img/elements/right_rectangle.svg") no-repeat;
+            }
+        }
+        p {
+            max-width: 301px;
+            margin: 12px 0;
+            text-align: right;
+        }
+    }
+    // .header__column-title
+    &__column-title {
+        font-size: 13px;
+        font-weight: 800;
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase;
+        background-color: #d9232e;
+        position: relative;
+        padding: 12px 0;
+        margin: 0 0 25px 0;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 38px;
+            top: 0;
+            right: -3px;
+            z-index: 1;
+            background: url("../img/elements/head_arr.svg") 0 0 no-repeat;
+        }
+    }
+    // .header__column-list
+    &__column-list {
+        font-size: 13px;
+        line-height: 15px;
+        font-weight: 300;
+        color: #333333;
+        display: flex;
+        li {
+            display: flex;
+            margin: 0 0 15px 0px;
+            &::before {
+                content: "";
+                display: inline-block;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                padding: 6px;
+                margin: 2px 8px 0 0;
+                background-color: #d9232e;
+                // outline: blue 1px solid;
+            }
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+    }
+}
