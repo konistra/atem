@@ -1,5 +1,5 @@
 .header {
-    background: url("../img/elements/bottom_rectangle.svg") center bottom / 1922px auto no-repeat, url("../img/bg/head_bg.jpg") center top / 1920px auto no-repeat;
+    background: url("../img/elements/angle_bottom-left.svg") center bottom / 1922px auto no-repeat, url("../img/bg/head_bg.jpg") center top / 1920px auto no-repeat;
     padding: 0 0 75px 0;
     // .header__row
     .ml7 {
@@ -55,7 +55,7 @@
     &__item {
         width: 152px;
         height: 164px;
-        background: url("../img/elements/menu-item-bg.svg") 0 0 no-repeat;
+        background: url("../img/elements/head_menu_bg.svg") 0 0 no-repeat;
         display: flex;
         margin: 0 10px 0 0;
         align-items: center;
@@ -109,7 +109,7 @@
                 z-index: -1;
                 left: -128px;
                 top: -120px;
-                background: url("../img/elements/right_rectangle.svg") no-repeat;
+                background: url("../img/elements/rectangle_right.svg") no-repeat;
             }
         }
         p {

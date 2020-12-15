@@ -17,6 +17,11 @@ testWebP(function(support) {
     }
 });
 
+
+
+window.onload = function() {
+    $('.preloader').fadeOut('slow');
+};
 // смотрим масив элементов c классом item_animation 
 const animItems = document.querySelectorAll('.item_animation');
 var leftPointMap = [];
@@ -32,6 +37,12 @@ function animOnScroll() {
             block: 'start'
         })
     });
+
+    // .pageYOffset количество прокреченых пикселей
+    // .innerHeight внутреняя высота экрана
+    // .offsetHeight высота элемента 
+    // offset(***).top 
+
     (pageYOffset < (window.innerHeight / 2)) ? btnStt.classList.remove('active'): btnStt.classList.add('active'); //активация кновки промотать вверх
     for (let i = 0; i < animItems.length; i++) {
         const animItem = animItems[i];
@@ -43,6 +54,8 @@ function animOnScroll() {
             animItemPoint = window.innerHeight - window.innerHeight / animStart;
         }
         if ((pageYOffset > animItemOffSet - animItemPoint) && pageYOffset < (animItemOffSet + animItemHeight)) {
+
+            // console.log(pageYOffset + ' > ' + animItemOffSet + ' - ' + animItemPoint);
             animItem.classList.add('animation');
         } else {
             animItem.classList.remove('animation');

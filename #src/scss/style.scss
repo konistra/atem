@@ -2,19 +2,18 @@
     @font-face {
         font-family: $font_name;
         font-display: swap;
-        src: url("../fonts/#{$file_name}.woff") format("woff"),
-        url("../fonts/#{$file_name}.woff2") format("woff2"),
-        url("../fonts/#{$file_name}.ttf") format("truetype");
+        src: url('../fonts/#{$file_name}.woff') format('woff'), url('../fonts/#{$file_name}.woff2') format('woff2'),
+            url('../fonts/#{$file_name}.ttf') format('truetype');
         font-weight: #{$weight};
         font-style: #{$style};
     }
 }
 
-@import "fonts";
-@import "reset";
+@import 'fonts';
+@import 'reset';
 body {
     // width: 100%;
-    //  min-width: 1020px;  
+    //  min-width: 1020px;
     min-width: 1050px;
     font-family: Gilroy;
     font-size: 20px;
@@ -25,6 +24,40 @@ body {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+}
+
+.preloader {
+    min-width: 1050px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #d7282f;
+    // background: #fff;
+    z-index: 30;
+    &__body {
+        width: 250px;
+        height: 100px;
+        position: absolute;
+        left: 50%;
+        top: 48%;
+        margin-left: -125px;
+        margin-top: -75px;
+        color: #fff;
+        font-size: 40px;
+        letter-spacing: -2px;
+        text-align: center;
+        line-height: 35px;
+    }
+    &__svg {
+        position: absolute;
+        width: 41px;
+        height: 41px;
+        background: url('../img/elements/icon_loading.svg') center center no-repeat;
+        background-size: 41px;
+        margin: -16px 0 0 -16px;
+    }
 }
 
 .container {
@@ -40,7 +73,7 @@ body {
 }
 
 .con-1 {
-    max-width: 890px;
+    max-width: 1920px;
     padding: 0 15px;
     margin: 0 auto;
 }
@@ -97,7 +130,7 @@ body {
             color: #d7282f;
         }
         &::before {
-            content: "";
+            content: '';
             position: absolute;
             display: inline-block;
             top: 0;
@@ -116,7 +149,7 @@ body {
             color: #d7282f;
         }
         &::before {
-            content: "";
+            content: '';
             position: absolute;
             display: inline-block;
             top: 0;
@@ -128,15 +161,18 @@ body {
     }
 }
 
-@import "header";
-.main {}
+@import 'header';
+.main {
+}
 
 .activities {
     min-height: 1950px;
     padding: 60px 0 0 0;
     margin: -30px 0 0 0;
-    background: url("../img/bg/main_bg.png") center -300px / 1920px auto no-repeat, url("../img/elements/equipment_angle_t.svg") center 350px / 1920px auto no-repeat, url("../img/elements/red_angle.svg") center 830px / 1300px auto no-repeat, url("../img/bg/equipment_bg-1.jpg") center 500px / 1918px auto no-repeat;
-    // linear-gradient(0deg, rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0.5)),
+    background: url('../img/bg/main_bg.png') center -300px / 1920px auto no-repeat,
+        url('../img/elements/angle_top-right.svg') center 350px / 1920px auto no-repeat,
+        url('../img/elements/angle_center-red.svg') center 830px / 1300px auto no-repeat,
+        url('../img/bg/equipment_bg-1.jpg') center 500px / 1918px auto no-repeat;
     // .activities__row
     &__row {
         display: flex;
@@ -151,7 +187,8 @@ body {
         align-items: center;
     }
     // .activities__column
-    &__column {}
+    &__column {
+    }
     // .activities__title
     &__title {
         max-width: 521px;
@@ -168,14 +205,14 @@ body {
         position: relative;
         z-index: 3;
         &::after {
-            content: "";
+            content: '';
             width: 896px;
             height: 587px;
             position: absolute;
             z-index: -1;
             left: -466px;
             top: -360px;
-            background: url("../img/elements/left_rectangle.svg") no-repeat;
+            background: url('../img/elements/rectangle_left.svg') no-repeat;
         }
     }
     // .activities__hexagons
@@ -186,7 +223,7 @@ body {
     .hex1 {
         width: 160px;
         height: 142px;
-        background: url("../img/elements/hex-gray.svg") 0 0 no-repeat;
+        background: url('../img/elements/hex-gray.svg') 0 0 no-repeat;
         p {
             font-family: GretaSansCondensedPro;
             max-width: 100px;
@@ -243,7 +280,7 @@ body {
     &__hexagon {
         width: 160px;
         height: 142px;
-        background: url("../img/elements/hex-red.svg") 0 0 no-repeat;
+        background: url('../img/elements/hex-red.svg') 0 0 no-repeat;
         display: flex;
         align-items: center;
         cursor: default;
@@ -255,13 +292,13 @@ body {
             text-align: center;
             font-family: HelveticaNeueCyr;
             font-size: 12px;
-            ;
             font-weight: 400;
             line-height: 14px;
             color: #fff;
         }
     }
-    &__row2 {}
+    &__row2 {
+    }
     // .equipment__title
     &__title2 {
         display: flex;
@@ -296,8 +333,11 @@ body {
 .equipment {
     min-height: 2442px;
     margin-top: -695px;
-    background: url("../img/bg/personal_bg.png") center -5px / 1920px auto no-repeat, url("../img/elements/equipment_angle_b.svg") center 0px / 1922px auto no-repeat, url("../img/elements/equipment_angle_t_l.svg") center 1065px / 1920px auto no-repeat, url("../img/elements/red_angle.svg") center 1550px / 1300px auto no-repeat, url("../img/bg/personal_bg_c.jpg") center 1185px / 1920px auto no-repeat;
-    // url("../img/bg/personal_bg.jpg") center 1320px / 1920px auto no-repeat,
+    background: url('../img/bg/personal_bg.png') center -5px / 1920px auto no-repeat,
+        url('../img/elements/angle_bottom-right.svg') center 0px / 1922px auto no-repeat,
+        url('../img/elements/angle_top-left.svg') center 1065px / 1920px auto no-repeat,
+        url('../img/elements/angle_center-red.svg') center 1550px / 1300px auto no-repeat,
+        url('../img/bg/personal_bg_c.jpg') center 1185px / 1920px auto no-repeat;
     &__incompany {
         max-width: 570px;
         text-align: center;
@@ -345,7 +385,7 @@ body {
     &__item {
         width: 130px;
         height: 150px;
-        background: url("../img/elements/industrial_bg.svg") 0 0 no-repeat;
+        background: url('../img/elements/equipment_bg.svg') 0 0 no-repeat;
         justify-content: center;
         text-align: center;
         padding-top: 32px;
@@ -356,7 +396,7 @@ body {
         &:last-child {
             margin: 0;
         }
-        &:nth-child(-n+3) {
+        &:nth-child(-n + 3) {
             padding-top: 27px;
         }
         span {
@@ -388,7 +428,8 @@ body {
         margin: 0 0 100px 0;
     }
     // .equipment__title
-    &__title {}
+    &__title {
+    }
     // .equipment__about2
     &__about2 {
         flex: 0 0 500px;
@@ -410,7 +451,8 @@ body {
         }
     }
     // .equipment__report-text
-    &__report-text {}
+    &__report-text {
+    }
     // .equipment__report-item
     &__report-item {
         display: flex;
@@ -464,7 +506,7 @@ body {
             letter-spacing: -0.5px;
             background: url('../img/elements/count-bg-170.svg');
             &::after {
-                content: 'из них ат-тестованы (НАКС)';
+                content: attr(text);
                 padding: 16px 10px 0 25px;
                 position: absolute;
                 color: #d9232e;
@@ -482,9 +524,9 @@ body {
             &::before {
                 content: '';
                 position: absolute;
-                top: 0;
+                top: -0px;
                 right: -72px;
-                height: 80px;
+                height: 76px;
                 width: 22px;
                 background: url('../img/elements/head_arr2.svg');
             }
@@ -537,7 +579,7 @@ body {
 }
 
 .map {
-    background: url("../img/elements/map_angle_b_l.svg") center 0 / 1920px auto no-repeat;
+    background: url('../img/elements/angle_bottom-left.svg') center 0 / 1920px auto no-repeat;
     margin-top: -475px;
     padding: 110px 0px 56px 0px;
     // .map__title
@@ -564,7 +606,7 @@ body {
             text-transform: uppercase;
             margin: 0px 0px 15px 0px;
             &::before {
-                content: "";
+                content: '';
                 display: inline-block;
                 width: 12px;
                 height: 12px;
@@ -595,7 +637,7 @@ body {
         background: #fff;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
-    &__points>g {
+    &__points > g {
         transform: translate(0px, -100%);
         transition: all 0.5s ease 0s;
         &.animation {
@@ -718,7 +760,7 @@ body {
                 &.active {
                     color: #fff;
                     cursor: default;
-                    background: url("../img/elements/tabs_pg.svg") no-repeat;
+                    background: url('../img/elements/pg_bg-btt.svg') no-repeat;
                 }
                 &:last-child {
                     margin: 0px 0px 0px 0px;
@@ -744,7 +786,7 @@ body {
                 // }
                 @media (max-width: 1225px) {
                     margin: 0px 10px 30px 10px;
-                    &:nth-child(2n+1) {
+                    &:nth-child(2n + 1) {
                         margin: 0px 10px 30px 10px;
                     }
                 }
@@ -807,7 +849,8 @@ body {
 }
 
 .docs {
-    background: url("../img/elements/equipment_angle_t.svg") center -220px / 1920px auto no-repeat, url("../img/bg/doc_bg.png") center 0 / 1920px auto no-repeat;
+    background: url('../img/elements/angle_top-right.svg') center -220px / 1920px auto no-repeat,
+        url('../img/bg/doc_bg.jpg') center 0 / 1920px auto no-repeat;
     margin: -110px 0px 0px 0px;
     padding: 220px 0px 0px 0px;
     // .docs__title
@@ -845,7 +888,7 @@ body {
             opacity: 1;
             transform: scale(1);
         }
-        &:nth-child(3n+3) {
+        &:nth-child(3n + 3) {
             margin: 0px 0px 100px 0px;
         }
     }
@@ -856,5 +899,5 @@ body {
     }
 }
 
-@import "footer";
-@import "popup";
+@import 'footer';
+@import 'popup';
